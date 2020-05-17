@@ -3,6 +3,12 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+// 设置反向代理
+var axios = require('axios')
+// url + uri
+axios.defaults.baseURL = 'http://localhost:8443/api'
+// 全局注册
+Vue.prototype.$axios = axios
 
 Vue.config.productionTip = false
 
